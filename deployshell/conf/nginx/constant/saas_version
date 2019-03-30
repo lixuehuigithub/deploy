@@ -1,0 +1,16 @@
+SaaS=BFRS_2.2.0.5.d_02151803
+algo_rest=1.2.1
+bbox_record=1.2.1
+visitor_manager=1.2.1
+push_server=1.2.1
+ocfs_api=1.2.1
+bbox_service=1.2.1
+web_saas=1.2.1
+bbox_register=1.2.1
+kaioh_api=1.2.1
+o_stream=1.2.1
+o_message_rest=1.2.1
+doorkeeper_gw=1.2.1
+web_h5_user_center=1.2.1
+bbox_batch=1.2.1
+user_api=1.2.1

@@ -1,0 +1,44 @@
+upstream batch {
+    server MASTER_1:8084 weight=5 max_fails=2 fail_timeout=10s;
+    server MASTER_2:8084 weight=5 max_fails=2 fail_timeout=10s;
+}
+
+upstream account {
+    server MASTER_1:8081 weight=5 max_fails=2 fail_timeout=10s;
+    server MASTER_2:8081 weight=5 max_fails=2 fail_timeout=10s;
+}
+
+#upstream api-gateway {
+#    server MASTER_1:8090 weight=5 max_fails=2 fail_timeout=10s;
+#    server MASTER_2:8090 weight=5 max_fails=2 fail_timeout=10s;
+#}
+
+upstream api-gateway {
+    server 127.0.0.1:8090;
+}
+
+upstream ocfs {
+    server MASTER_1:8099 weight=5 max_fails=2 fail_timeout=10s;
+    server MASTER_2:8099 weight=5 max_fails=2 fail_timeout=10s;
+}
+
+upstream user-center {
+    ip_hash;
+    server MASTER_1:8088 weight=5 max_fails=2 fail_timeout=10s;
+    server MASTER_2:8088 weight=5 max_fails=2 fail_timeout=10s;
+}
+
+#upstream kaioh {
+#    ip_hash;
+#    server MASTER_1:8089 weight=5 max_fails=2 fail_timeout=2s;
+#    server MASTER_2:8089 weight=5 max_fails=2 fail_timeout=2s;
+#}
+
+upstream kaioh {
+    server 127.0.0.1:8089;
+}
+
+upstream visitor {
+    server MASTER_1:8083 weight=5 max_fails=2 fail_timeout=10s;
+    server MASTER_2:8083 weight=5 max_fails=2 fail_timeout=10s;
+}

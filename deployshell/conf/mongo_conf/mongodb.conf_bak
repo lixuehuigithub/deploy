@@ -1,0 +1,9 @@
+port=27017
+bind_ip=0.0.0.0
+dbpath=/data/
+quiet=true
+master=true
+slave=true
+#fork=true
+source=master_ip:27017
+autoresync=true

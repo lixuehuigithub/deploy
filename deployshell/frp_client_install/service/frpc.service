@@ -1,0 +1,10 @@
+[Unit]
+Description=frpc
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart= /home/apps/frp_client/frpc -c /home/apps/frp_client/frpc_http.ini
+
+[Install]
+WantedBy=multi-user.target
